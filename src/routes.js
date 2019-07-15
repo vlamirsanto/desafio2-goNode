@@ -8,6 +8,7 @@ const DashboardController = require('./app/controllers/DashboardController')
 const FilesController = require('./app/controllers/FilesController')
 const AppointmentsController = require('./app/controllers/AppointmentsController')
 const AvailableController = require('./app/controllers/AvailableController')
+const ScheduleController = require('./app/controllers/ScheduleController')
 
 const routes = express.Router()
 
@@ -33,5 +34,6 @@ routes.get('/files/:file', FilesController.index)
 routes.get('/app/appointments/new/:provider', AppointmentsController.index)
 routes.post('/app/appointments/new/:provider', AppointmentsController.save)
 routes.get('/app/available/:provider', AvailableController.index)
+routes.get('/app/schedule', ScheduleController.index)
 
 module.exports = routes
