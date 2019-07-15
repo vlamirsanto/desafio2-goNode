@@ -31,6 +31,7 @@ routes.get('/app/logout', SessionController.logout)
 routes.get('/app/dashboard', DashboardController.index)
 routes.get('/files/:file', FilesController.index)
 routes.get('/app/appointments/new/:provider', AppointmentsController.index)
+routes.post('/app/appointments/new/:provider', AppointmentsController.save)
 routes.get('/app/available/:provider', AvailableController.index)
 
 module.exports = routes
